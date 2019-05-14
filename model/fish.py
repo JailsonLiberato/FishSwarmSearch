@@ -1,8 +1,9 @@
 class Fish(object):
 
-    def __init__(self):
-        self.__position = []
+    def __init__(self, position):
+        self.__position = position
         self.__weight = []
+        self.__fitness = 0.0
 
     @property
     def position(self):
@@ -19,4 +20,12 @@ class Fish(object):
     @weight.setter
     def weight(self, weight):
         self.__weight = weight
+
+    @property
+    def fitness(self):
+        return self.__fitness
+
+    @fitness.setter
+    def fitness(self, fitness):
+        self.__fitness = fitness
 
