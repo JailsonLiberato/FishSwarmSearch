@@ -28,4 +28,3 @@ class Fish(object):
     @fitness.setter
     def fitness(self, fitness):
         self.__fitness = fitness
-
