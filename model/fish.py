@@ -1,9 +1,14 @@
+import numpy as np
+from util.constants import Constants
+
+
 class Fish(object):
 
     def __init__(self, position):
         self.__position = position
-        self.__weight = []
+        self.__weight = 0.0
         self.__fitness = 0.0
+        self.__neighborhood = np.zeros(Constants.N_DIMENSIONS)
 
     @property
     def position(self):
@@ -28,3 +33,11 @@ class Fish(object):
     @fitness.setter
     def fitness(self, fitness):
         self.__fitness = fitness
+
+    @property
+    def neighborhood(self):
+        return self.__neighborhood
+
+    @neighborhood.setter
+    def neighborhood(self, neighborhood):
+        self.__neighborhood = neighborhood
